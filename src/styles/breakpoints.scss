@@ -1,0 +1,36 @@
+$breakpoints: (
+  tablet-portrait: 768px,
+  tablet-landscape: 1024px,
+  desktop: 1440px,
+  full-hd: 1920px
+);
+
+@mixin mobile-only {
+  @media(max-width: map-get($breakpoints, tablet-portrait) - 1 ) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-up {
+  @media(min-width: map-get($breakpoints, tablet-portrait)) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-up {
+  @media(min-width: map-get($breakpoints, tablet-landscape)) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media(min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin full-hd-up {
+  @media(min-width: map-get($breakpoints, full-hd)) {
+    @content;
+  }
+}

@@ -1,4 +1,21 @@
-<p>course-listing works!</p>
-<div *ngIf="{ courses: courses$ | async } as vm">
+<div class="course-listing" *ngIf="{ courses: courses$ | async } as vm">
+  <h2 class="course-listing__heading">Courses</h2>
   {{ vm.courses | json }}
+  <div class="course-listing__content">
+    <div class="course-listing__labels-row">
+      <span>ID</span>
+      <span>Image</span>
+      <span>Name</span>
+      <span>Status</span>
+    </div>
+    <div class="course-listing__grid">
+      <!-- TODO: add filtering -->
+      <div class="course-listing__grid-row" *ngFor="let course of vm.courses">
+        <span>{{ course.id }}</span>
+        <img [src]="course.imageUrl" [alt]="course.name" />
+        <span>{{ course.name }}</span>
+        <span>{{ course.status }}</span>
+      </div>
+    </div>
+  </div>
 </div>
