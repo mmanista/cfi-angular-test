@@ -1,0 +1,4 @@
+<p>course-detail works!</p>
+<div *ngIf="{ course: course$ | async } as vm">
+  {{ vm.course | json }}
+</div>

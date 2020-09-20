@@ -1,0 +1,4 @@
+<p>course-listing works!</p>
+<div *ngIf="{ courses: courses$ | async } as vm">
+  {{ vm.courses | json }}
+</div>
