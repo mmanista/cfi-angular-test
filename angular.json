@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "cfi-angular-test:build"
+            "browserTarget": "cfi-angular-test:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
