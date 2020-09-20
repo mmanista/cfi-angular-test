@@ -1,0 +1,29 @@
+@import '../../../styles/tools';
+
+.course-listing {
+  padding: 0 16px;
+  margin: 40px 0;
+
+  @include page-container;
+
+  &__heading {
+    color: $color-rhino;
+    font-weight: 500;
+  }
+
+  &__grid-row,
+  &__labels-row {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 36px 85px 1fr 130px;
+    grid-column-gap: 16px;
+  }
+
+  &__labels-row {
+    > span {
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-rhino;
+    }
+  }
+}

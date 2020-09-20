@@ -1,0 +1,21 @@
+@import './breakpoints.scss';
+
+@mixin page-container {
+  @include tablet-portrait-up {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: map-get($breakpoints, tablet-portrait);
+  }
+
+  @include tablet-landscape-up {
+    max-width: map-get($breakpoints, tablet-landscape);
+  }
+
+  @include desktop-up {
+    max-width: map-get($breakpoints, desktop);
+  }
+
+  @include full-hd-up {
+    max-width: map-get($breakpoints, full-hd);
+  }
+}

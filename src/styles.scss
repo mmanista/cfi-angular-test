@@ -1,7 +1,16 @@
+@import './styles/tools.scss';
+
 * {
   box-sizing: border-box;
 }
 
 html, body {
   margin: 0;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  background-color: $color-athens-gray;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
