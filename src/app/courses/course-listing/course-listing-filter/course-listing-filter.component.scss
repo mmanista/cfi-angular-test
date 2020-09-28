@@ -1,0 +1,20 @@
+@import "../../../../styles/tools.scss";
+
+.course-listing-filter {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+
+  &__select-container {
+    max-width: 140px;
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  &__clear-btn {
+    font-weight: 500;
+  }
+
+}
+
+

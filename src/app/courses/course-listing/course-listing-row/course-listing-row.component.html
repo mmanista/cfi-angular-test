@@ -1,14 +1,21 @@
 <div class="course-listing-row">
-  <span>{{ course.id }}</span>
+  <div>
+    <span class="is-hidden-tablet">ID: </span>
+    {{ course.id }}
+  </div>
   <img [src]="course.imageUrl" [alt]="course.name" />
   <div class="course-listing-row__course-name-container">
-    <a [routerLink]="course.id">{{ course.name }}</a>
+    <div class="course-listing-row__course-name">
+      <span class="is-hidden-tablet">Course: </span>
+      <a [routerLink]="course.id">{{ course.name }}</a>
+    </div>
     <span *ngIf="course.instructors?.length > 0">
       <b>Instructors: </b>
       <ng-container *ngFor="let instructor of course.instructors; let last = last">{{ instructor.name }}{{ !last ? ', ' : '' }}</ng-container>
     </span>
   </div>
   <div>
+    <span class="is-hidden-tablet">Status: </span>
     <span class="course-listing-row__status">{{ course.status }}</span>
   </div>
 </div>

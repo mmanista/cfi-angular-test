@@ -1,5 +1,7 @@
 @import '../../../styles/tools';
 
+$table-border-radius: 4px;
+
 .course-listing {
   padding: 0 16px;
   margin: 40px 0;
@@ -14,8 +16,22 @@
   }
 
   &__grid {
+    border-bottom-left-radius: $table-border-radius;
+    border-bottom-right-radius: $table-border-radius;
+  }
+
+  &__grid,
+  &__controls-container {
     background-color: $color-white;
     padding: 0 16px;
+  }
+
+  &__controls-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    border-top-left-radius: $table-border-radius;
+    border-top-right-radius: $table-border-radius;
   }
 
   &__labels-row {

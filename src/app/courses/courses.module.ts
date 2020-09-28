@@ -1,3 +1,4 @@
+import { CourseListingFilterComponent } from './course-listing/course-listing-filter/course-listing-filter.component';
 import { CourseListingRowComponent } from './course-listing/course-listing-row/course-listing-row.component';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,7 @@ const routes = [
 ];
 
 @NgModule({
-  declarations: [CourseListingComponent, CourseDetailComponent, CourseListingRowComponent],
+  declarations: [CourseListingComponent, CourseDetailComponent, CourseListingRowComponent, CourseListingFilterComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes)
