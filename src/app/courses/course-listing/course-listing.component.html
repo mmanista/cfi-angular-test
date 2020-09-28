@@ -1,7 +1,12 @@
-<div class="course-listing" *ngIf="{ courses: courses$ | async } as vm">
+<div class="course-listing" *ngIf="{ allCourses: allCourses$ | async } as vm">
   <h2 class="course-listing__heading">Courses</h2>
   <div class="course-listing__content">
-    <div class="course-listing__labels-row">
+    <div class="course-listing__controls-container">
+      <div class="course-listing__filter-container">
+        <cfi-course-listing-filter [courseStatuses]="courseStatuses$ | async" (filterChanged)="onStatusFilterChange($event, vm.allCourses)"></cfi-course-listing-filter>
+      </div>
+    </div>
+    <div class="course-listing__labels-row is-hidden-mobile">
       <span>ID</span>
       <span>Image</span>
       <span>Name</span>
@@ -9,8 +14,7 @@
     </div>
     <div class="course-listing__grid">
       <!-- TODO: add filtering -->
-      <cfi-course-listing-row *ngFor="let course of vm.courses" [course]="course"></cfi-course-listing-row>
+      <cfi-course-listing-row *ngFor="let course of filteredCourses$ | async" [course]="course"></cfi-course-listing-row>
       </div>
   </div>
-  <table class="table"></table>
 </div>

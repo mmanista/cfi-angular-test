@@ -1,0 +1,10 @@
+<div class="course-listing-filter">
+  <span>Filter by:</span>
+  <div class="course-listing-filter__select-container select">
+    <select #filterRef (change)="changeFilter($event.target?.value)">
+      <option value="">Course Status</option>
+      <option *ngFor="let courseStatus of courseStatuses" [value]="courseStatus">{{ courseStatus }}</option>
+    </select>
+  </div>
+  <button class="course-listing-filter__clear-btn button is-link is-inverted" (click)="clearFilter(filterRef)">Clear</button>
+</div>
