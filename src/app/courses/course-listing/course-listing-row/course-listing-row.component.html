@@ -1,0 +1,14 @@
+<div class="course-listing-row">
+  <span>{{ course.id }}</span>
+  <img [src]="course.imageUrl" [alt]="course.name" />
+  <div class="course-listing-row__course-name-container">
+    <a [routerLink]="course.id">{{ course.name }}</a>
+    <span *ngIf="course.instructors?.length > 0">
+      <b>Instructors: </b>
+      <ng-container *ngFor="let instructor of course.instructors; let last = last">{{ instructor.name }}{{ !last ? ', ' : '' }}</ng-container>
+    </span>
+  </div>
+  <div>
+    <span class="course-listing-row__status">{{ course.status }}</span>
+  </div>
+</div>

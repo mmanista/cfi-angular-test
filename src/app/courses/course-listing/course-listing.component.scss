@@ -9,17 +9,23 @@
   &__heading {
     color: $color-rhino;
     font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
   }
 
-  &__grid-row,
+  &__grid {
+    background-color: $color-white;
+    padding: 0 16px;
+  }
+
   &__labels-row {
     align-items: center;
     display: grid;
     grid-template-columns: 36px 85px 1fr 130px;
     grid-column-gap: 16px;
-  }
+    padding: 0 16px;
+    margin: 16px 0;
 
-  &__labels-row {
     > span {
       font-size: 16px;
       font-weight: 500;

@@ -1,0 +1,38 @@
+@import "../../../../styles/tools.scss";
+
+:host {
+  display: block;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $color-athens-gray;
+  }
+}
+
+.course-listing-row {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 36px 85px 1fr 130px;
+  grid-column-gap: 16px;
+  padding: 10px 0;
+  background-color: $color-white;
+
+
+
+  &__course-name-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 8px;
+
+    > a {
+      font-weight: 500;
+    }
+  }
+
+  &__status {
+    border: 2px solid $color-pumice;
+    border-radius: 4px;
+    font-size: 12px;
+    text-align: center;
+    padding: 3px 10px;
+  }
+}

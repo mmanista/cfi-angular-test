@@ -2,7 +2,7 @@ import { CoursesService } from './../courses.service';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'cfi-courses',
+  selector: 'cfi-course-listing',
   templateUrl: './course-listing.component.html',
   styleUrls: ['./course-listing.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
